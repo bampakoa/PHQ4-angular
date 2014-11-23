@@ -140,10 +140,7 @@ angular.module('myApp')
 
             angular.forEach($scope.pictures, function (p) {
                 p.transitionable.set([0, 0, 0], {duration: 600, curve: 'easeInOut'});
-                p.transitionableMod.set([-25, 0, 0], {duration: 3000, curve: 'easeIn'}, function(){
-                    //p.transitionableMod.set([-25, 0, 0], {duration: 3000, curve: 'easeInOut'});
-                });
-
+                p.transitionableMod.set([-25, 0, 0], {duration: 3000, curve: 'easeIn'});
             })
         }
 
