@@ -1,0 +1,36 @@
+<fa-app class="full-screen">
+    <fa-modifier fa-translate="[0,0,-10]">
+        <fa-image-surface class="splashBackgroundImg" fa-image-url="images/splashBackground.png"></fa-image-surface>
+    </fa-modifier>
+    <fa-modifier fa-origin="title.origin" fa-size="title.size" fa-translate="[0,0,-10]">
+        <fa-surface>
+            <span class="largeText">PHQ</span>
+            <span class="skinnyText">4</span>
+        </fa-surface>
+    </fa-modifier>
+    <fa-modifier ng-repeat="i in icons" fa-origin="i.origin" fa-size="i.size" fa-translate="i.transitionable.get()">
+        <fa-surface fa-background-color="'rgb(230, 40, 40)'"></fa-surface>
+        <fa-modifier fa-origin="[.5,.5]">
+            <fa-surface fa-properties="{textAlign: 'center', paddingTop: '{{i.padding}}'}">
+                <img height="{{i.image.height}}" width="{{i.image.width}}" ng-src="images/{{i.image.content}}" />
+            </fa-surface>
+        </fa-modifier>
+        <fa-modifier fa-origin="i.text.origin" fa-size="i.text.size">
+            <fa-surface class="surfaceText">{{i.text.content}}</fa-surface>
+        </fa-modifier>
+    </fa-modifier>
+    <fa-view>
+        <fa-modifier ng-repeat="p in pictures" fa-origin="p.origin" fa-translate="p.transitionable.get()">
+            <fa-container-surface fa-options="p.options">
+                <fa-modifier fa-translate="[0,0]">
+                    <fa-surface>
+                        <img height="{{p.height}}" ng-src="images/{{p.name}}" />
+                    </fa-surface>
+                </fa-modifier>
+                <fa-modifier fa-origin="[.5,1]">
+                    <fa-surface class="surfaceText" fa-size="p.text.size">{{p.text.content}}</fa-surface>
+                </fa-modifier>
+            </fa-container-surface>
+        </fa-modifier>
+    </fa-view>
+</fa-app>
