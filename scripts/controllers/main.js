@@ -130,6 +130,7 @@ angular.module('myApp')
 
         angular.forEach($scope.pictures, function (p) {
             p.transitionable = new Transitionable([p.offset, 0, 20]);
+            p.transitionableMod = new Transitionable([0, 0, 0]);
         })
 
         $scope.animate = function(){
@@ -139,6 +140,10 @@ angular.module('myApp')
 
             angular.forEach($scope.pictures, function (p) {
                 p.transitionable.set([0, 0, 0], {duration: 600, curve: 'easeInOut'});
+                p.transitionableMod.set([-25, 0, 0], {duration: 3000, curve: 'easeIn'}, function(){
+                    //p.transitionableMod.set([-25, 0, 0], {duration: 3000, curve: 'easeInOut'});
+                });
+
             })
         }
 
@@ -149,6 +154,7 @@ angular.module('myApp')
 
             angular.forEach($scope.pictures, function (p) {
                 p.transitionable.set([p.offset, 0, 0], {duration: 600, curve: 'easeInOut'});
+                p.transitionableMod.set([0, 0, 0], {curve: 'easeInOut'});
             })
         }
 

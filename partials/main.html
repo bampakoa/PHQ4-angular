@@ -22,7 +22,7 @@
     <fa-view>
         <fa-modifier ng-repeat="p in pictures" fa-origin="p.origin" fa-translate="p.transitionable.get()">
             <fa-container-surface fa-options="p.options">
-                <fa-modifier fa-translate="[0,0]">
+                <fa-modifier fa-translate="p.transitionableMod.get()">
                     <fa-surface>
                         <img height="{{p.height}}" ng-src="images/{{p.name}}" />
                     </fa-surface>
