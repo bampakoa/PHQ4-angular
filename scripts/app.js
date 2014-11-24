@@ -5,7 +5,7 @@ angular.module('myApp',
     'ngTouch', 'ngSanitize',
     'ngResource', 'ui.router',
     'famous.angular'])
-  .config(function ($stateProvider, $urlRouterProvider) {
+  .config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
         $stateProvider
             .state('home', {
                 url: '/',
@@ -14,5 +14,5 @@ angular.module('myApp',
             })
 
         $urlRouterProvider.otherwise('/');
-  })
+  }])
 ;
