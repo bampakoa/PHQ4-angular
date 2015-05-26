@@ -1,0 +1,6 @@
+{
+  "name": "PHQ4-angular",
+  "description": "Famo.us Angular PHQ4 demo",
+  "repository": "https://github.com/bampakoa/PHQ4-angular",
+  "keywords": ["node", "express", "static"]
+}

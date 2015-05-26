@@ -1,0 +1,25 @@
+{
+  "name": "PHQ4-angular",
+  "version": "1.0.0",
+  "description": "Famo.us Angular PHQ4 demo",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "~4.9.x"
+  },
+  "engines": {
+    "node": "0.10.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bampakoa/PHQ4-angular"
+  },
+  "keywords": [
+    "node",
+    "heroku",
+    "express"
+  ],
+  "license": "MIT"
+}
