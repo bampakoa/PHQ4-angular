@@ -1,5 +1,5 @@
 {
-  "name": "PHQ4-angular",
+  "name": "phq4-angular",
   "version": "1.0.0",
   "description": "Famo.us Angular PHQ4 demo",
   "main": "index.js",
@@ -10,7 +10,7 @@
     "express": "~4.9.x"
   },
   "engines": {
-    "node": "0.10.x"
+    "node": "6.11.1"
   },
   "repository": {
     "type": "git",
